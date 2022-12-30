@@ -1,0 +1,9 @@
+<div class="container-spisok">
+						<a href=""><li class="jewelry">Ювелирные изделия</li></a>
+						<a href=""><li class="clock">часы</li></a>
+						<a href=""><li class="flavors">ароматы</li></a>
+						<a href=""><li class="brands">бренды</li></a>
+						<a href=""><li class="leather">изделия из кожи</li></a>
+						<a href=""><li class="wedding">Свадебные украшения</li></a>
+						<a href=""><li class="other">другое</li></a>
+					</div>
