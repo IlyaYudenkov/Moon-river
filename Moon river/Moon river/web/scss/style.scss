@@ -47,7 +47,7 @@ html{
    position: relative;
 }
 .container-left{
-   width: 765px;
+   width: 747px;
    margin: 0px auto;
 }
 .container-right{
@@ -56,7 +56,7 @@ html{
 }
 
 .begin-right {
-      width: 650px;
+      width: 610px;
       height: 1124px;
       background-color: #272727;
 		&__down {
@@ -68,7 +68,7 @@ html{
 }
 .header {
       position: relative;
-      margin-top: 70px;
+      margin-top: 40px;
       display: flex;
       justify-content: space-between;
 		&__menu {
@@ -168,7 +168,7 @@ html{
    height: 1164px;
    background-color: var(--white);
 		&__logo {
-         margin-top: 71px;
+         margin-top: 41px;
          display: flex;
          justify-content: flex-start;
 		}
@@ -250,7 +250,7 @@ html{
 
 .wrapper-hidden {
    background-color: var(--2727);
-   position: absolute;
+   position: fixed;
    overflow: hidden;
    left: 0;
    top: 0;
@@ -265,7 +265,7 @@ html{
 		&__hidden {
          display: flex;
          justify-content: space-between;
-         margin: 70px 0 55px 0;
+         margin: 40px 0 40px 0;
 		}
 }
 .hidden {
@@ -291,14 +291,12 @@ html{
          transition-duration: 0.4s;
          &:hover{
             border: 1px solid var(--white);
-             transition-duration: 0.4s;
+            transition-duration: 0.4s;
          }
       }
       }
 		&__footer {
-         margin-bottom: 140px;
-         border-top: 1.8px solid #2F2F2F;
-         padding-top: 82px;
+         margin: 50px 0 110px 0;
 		}
 }
 .menu {
@@ -360,16 +358,32 @@ html{
    display: flex;
    justify-content: space-between;
 }
-
+.title5{
+   padding: 20px 0;
+& a{         
+   font-family: 'Futura-premedium';
+   font-size: 16px;
+   line-height: var(--line-height);
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+   color: var(--white);
+   border-bottom: 2px solid transparent;
+   padding: 20px 0;
+   transition: all ease 0.3s;
+   &:hover{
+      border-bottom: 2px solid var(--white);
+      transition: all ease-in 0.3s;
+   }
+}
+}
 .jewelry {
-      border: 1px solid var(--white);
       position: relative;
    &__title {
    }
 
    &__menu {
       position: absolute;
-      top: 142%;
+      top: 190%;
    }
 }
 .menu {
@@ -434,29 +448,10 @@ html{
    &__menu {
       position: absolute;
       left: -562%;
-      top: 139%;
+      top: 190%;
    }
 }
-.title5{
-            padding: 27px 0;
-         & a{         
-            font-family: 'Futura-premedium';
-            font-style: normal;
-            font-weight: 450;
-            font-size: 16px;
-            line-height: var(--line-height);
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--white);
-            border-bottom: 2px solid transparent;
-            padding: 27px 0;
-            transition: all ease 0.3s;
-            &:hover{
-               border-bottom: 2px solid var(--white);
-               transition: all ease-in 0.3s;
-            }
-         }
-}
+
 .flavours {
    position: relative;
    &__title {
@@ -465,7 +460,7 @@ html{
    &__menu {
       position: absolute;
       left: -472%;
-      top: 139%;
+      top: 190%;
    }
 }
 .brands {
@@ -476,7 +471,7 @@ html{
    &__menu {
       position: absolute;
       left: -1047%;
-      top: 139%;
+      top: 190%;
    }
 }
 .leather {
@@ -487,7 +482,7 @@ html{
    &__menu {
       position: absolute;
       left: -406.7%;
-      top: 139%;
+      top: 190%;
    }
 }
 .wedding {
@@ -498,7 +493,7 @@ html{
    &__menu {
       position: absolute;
       left: -443.5%;
-      top: 139%;
+      top: 190%;
    }
 }
 .other {
@@ -509,21 +504,21 @@ html{
    &__menu {
       position: absolute;
       left: -1916.7%;
-      top: 139%;
+      top: 190%;
    }
 }
 
 .spisok {
-
 		&__hidden {
-         margin-bottom: 70px;
          background: #2F2F2F;
 		}
 }
 
 .sections {
-   height: 270px;
+   height: 400px;
    background-color: var(--2727);
+   border-bottom: 1.8px solid #2F2F2F;
+   margin: 0 84px 95px 84px;
 }
 
 .forwhom {
@@ -537,8 +532,6 @@ html{
 .title4 {
    margin-bottom: 30px;
    font-family: 'Futura-semibold';
-   font-style: normal;
-   font-weight: 600;
    font-size: 16px;
    line-height: var(--line-height);
    letter-spacing: 0.06em;
@@ -546,11 +539,8 @@ html{
    color: var(--white);
 }
 .links {
-   margin-bottom: 70px;
       & a{
          font-family: 'Futura-premedium';
-         font-style: normal;
-         font-weight: 400;
          font-size: 18px;
          line-height: var(--line-height);
          letter-spacing: 0.06em;
@@ -603,7 +593,8 @@ html{
    display: flex;
    width: 1185px;
    margin: 0px auto;
-
+   border-top: 1.8px solid #2F2F2F;
+   padding-top: 50px;
 }
 .footer {
 
@@ -615,6 +606,7 @@ html{
 
 		&__info {
          margin-left: 85px;
+         height: 280px;
          display: flex;
          flex-direction: column;
          justify-content: space-between;
@@ -623,7 +615,6 @@ html{
 .image-container {
    width: 650px;
    margin: 0px auto;
-
 }
 .image {
 
@@ -650,6 +641,13 @@ html{
 		&__collections{
          display: flex;
          justify-content: flex-end;
+            & p{
+               font-family: 'Futura-premedium';
+               font-size: 18px;
+               line-height: var(--line-height);
+               letter-spacing: 0.06em;
+               color: var(--white);
+            }
             & a{
                font-family: 'Futura-premedium';
                font-size: 18px;
@@ -675,7 +673,7 @@ html{
          display: flex;
          flex-direction: column;
          & a{
-            margin-top: 5px;
+            
             font-family: 'Futura-light';
             font-size: 18px;
             line-height: var(--line-height);
@@ -684,10 +682,10 @@ html{
 		}
 
 		&__down {
+         height: 30px;
 		}
 
       &__stores {
-         margin-top: 20px;
          & img{
          width: 103px;
          height: 35px;
@@ -707,7 +705,7 @@ html{
          width: 90px;
          display: flex;
          justify-content: space-between;
-         margin-top: 18px;
+         margin-top: 15px;
          & a{
             transition-duration: 0.3s;
          }

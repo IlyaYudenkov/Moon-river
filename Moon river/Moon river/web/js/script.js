@@ -36,6 +36,9 @@ const wedding = document.querySelector('.wedding')
 const weddingMenu = document.querySelector('.wedding__menu')
 const other = document.querySelector('.other')
 const otherMenu = document.querySelector('.other__menu')
+const sections = document.querySelector('.sections')
+const footer = document.querySelector('.hidden__footer')
+const wrapper = document.querySelector('.wrapper')
 
 nextSlide = () =>{
     dots[active].classList.remove('_active')
@@ -111,14 +114,17 @@ displayNone5 = () => {
 }
 
 showHidden = () =>{
-    wrapperHidden.style.display = 'block'
+    wrapperHidden.style.display = 'block';
+    wrapper.style.display = 'none';
 }
 closeHidden = () => {
-    wrapperHidden.style.display = 'none'
+    wrapperHidden.style.display = 'none';
+    wrapper.style.display = 'block';
 }
 
 showJewelry = () => {
         jewelryMenu.style.display = 'flex';
+        sections.style.display = 'block';
         closeClock();
         closeBrands();
         closeFlavours();
@@ -127,11 +133,13 @@ showJewelry = () => {
         closeOther();
 }
 closeJewelry = () => {
-        jewelryMenu.style.display = 'none';  
+        jewelryMenu.style.display = 'none';
+        footer.style.display = 'block';
 }
 
 showClock = () => {
     clockMenu.style.display = 'flex';
+    sections.style.display = 'block';
     closeJewelry();
     closeBrands();
     closeFlavours();
@@ -140,12 +148,14 @@ showClock = () => {
     closeOther();
 }
 closeClock = () => {
-    clockMenu.style.display = 'none';
+    clockMenu.style.display = 'none';  
+    footer.style.display = 'block';  
 }
     
 
 showFlavours = () => {
     flavoursMenu.style.display = 'flex';
+    sections.style.display = 'block';
     closeJewelry();
     closeClock();
     closeBrands();
@@ -156,10 +166,12 @@ showFlavours = () => {
 
 closeFlavours = () =>{
     flavoursMenu.style.display = 'none';
+    footer.style.display = 'block';
 }
 
 showBrands = () => {
     brandsMenu.style.display = 'flex';
+    sections.style.display = 'block';
     closeJewelry();
     closeClock();
     closeFlavours();
@@ -170,10 +182,12 @@ showBrands = () => {
 
 closeBrands = () =>{
     brandsMenu.style.display = 'none';
+    footer.style.display = 'block';
 }
 
 showLeather = () => {
     leatherMenu.style.display = 'flex';
+    sections.style.display = 'block';
     closeJewelry();
     closeClock();
     closeFlavours();
@@ -182,12 +196,14 @@ showLeather = () => {
     closeOther();
 }
 
-closeLeather= () =>{
+closeLeather = () =>{
     leatherMenu.style.display = 'none';
+    footer.style.display = 'block';
 }
 
 showWedding = () => {
     weddingMenu.style.display = 'flex';
+    sections.style.display = 'block';
     closeJewelry();
     closeClock();
     closeFlavours();
@@ -197,10 +213,12 @@ showWedding = () => {
 }
 closeWedding = () => {
     weddingMenu.style.display = 'none';
+    footer.style.display = 'block';
 }
 
 showOther = () => {
     otherMenu.style.display = 'flex';
+    sections.style.display = 'block';
     closeJewelry();
     closeClock();
     closeFlavours();
@@ -209,7 +227,17 @@ showOther = () => {
 }
 closeOther = () => {
     otherMenu.style.display = 'none';
+    footer.style.display = 'block';
 }
+
+closeFooter = () => {
+    footer.style.display = 'none';
+}
+
+
+closeSections = () => { 
+    sections.style.display = 'none';
+} 
 
 prev.addEventListener('click', prevSlide);
 next.addEventListener('click', nextSlide);
@@ -238,22 +266,36 @@ burgerHidden.addEventListener('click', closeHidden)
 
 
 jewelry.addEventListener('mouseover', showJewelry)
-jewelryMenu.addEventListener('mouseleave', closeJewelry)
+jewelryMenu.addEventListener('mouseout', closeJewelry)
+jewelryMenu.addEventListener('mouseout', closeSections)
+jewelry.addEventListener('mouseover', closeFooter)
 
 clock.addEventListener('mouseover', showClock)
 clockMenu.addEventListener('mouseout', closeClock)
+clockMenu.addEventListener('mouseout', closeSections)
+clock.addEventListener('mouseover', closeFooter)
 
 flavours.addEventListener('mouseover', showFlavours)
 flavoursMenu.addEventListener('mouseout', closeFlavours)
+flavoursMenu.addEventListener('mouseout', closeSections)
+flavours.addEventListener('mouseover', closeFooter)
 
 brands.addEventListener('mouseover', showBrands)
 brandsMenu.addEventListener('mouseout', closeBrands)
+brandsMenu.addEventListener('mouseout', closeSections)
+brands.addEventListener('mouseover', closeFooter)
 
 leather.addEventListener('mouseover', showLeather)
 leatherMenu.addEventListener('mouseout', closeLeather)
+leatherMenu.addEventListener('mouseout', closeSections)
+leather.addEventListener('mouseover', closeFooter)
 
 wedding.addEventListener('mouseover', showWedding)
 weddingMenu.addEventListener('mouseout', closeWedding)
+weddingMenu.addEventListener('mouseout', closeSections)
+wedding.addEventListener('mouseover', closeFooter)
 
 other.addEventListener('mouseover', showOther)
 otherMenu.addEventListener('mouseout', closeOther)
+otherMenu.addEventListener('mouseout', closeSections)
+other.addEventListener('mouseover', closeFooter)

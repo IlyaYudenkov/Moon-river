@@ -132,7 +132,7 @@ html {
 }
 
 .container-left {
-  width: 765px;
+  width: 747px;
   margin: 0px auto;
 }
 
@@ -142,7 +142,7 @@ html {
 }
 
 .begin-right {
-  width: 650px;
+  width: 610px;
   height: 1124px;
   background-color: #272727;
 }
@@ -155,7 +155,7 @@ html {
 
 .header {
   position: relative;
-  margin-top: 70px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -255,7 +255,7 @@ html {
   background-color: var(--white);
 }
 .begin-left__logo {
-  margin-top: 71px;
+  margin-top: 41px;
   display: flex;
   justify-content: flex-start;
 }
@@ -329,7 +329,7 @@ html {
 
 .wrapper-hidden {
   background-color: var(--2727);
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   left: 0;
   top: 0;
@@ -345,7 +345,7 @@ html {
 .header__hidden {
   display: flex;
   justify-content: space-between;
-  margin: 70px 0 55px 0;
+  margin: 40px 0 40px 0;
 }
 
 .hidden__logo {
@@ -370,9 +370,7 @@ html {
   transition-duration: 0.4s;
 }
 .hidden__footer {
-  margin-bottom: 140px;
-  border-top: 1.8px solid #2F2F2F;
-  padding-top: 82px;
+  margin: 50px 0 110px 0;
 }
 
 .menu__elements {
@@ -429,13 +427,31 @@ html {
   justify-content: space-between;
 }
 
+.title5 {
+  padding: 20px 0;
+}
+.title5 a {
+  font-family: "Futura-premedium";
+  font-size: 16px;
+  line-height: var(--line-height);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  border-bottom: 2px solid transparent;
+  padding: 20px 0;
+  transition: all ease 0.3s;
+}
+.title5 a:hover {
+  border-bottom: 2px solid var(--white);
+  transition: all ease-in 0.3s;
+}
+
 .jewelry {
-  border: 1px solid var(--white);
   position: relative;
 }
 .jewelry__menu {
   position: absolute;
-  top: 142%;
+  top: 190%;
 }
 
 .menu__hidden {
@@ -450,28 +466,7 @@ html {
 .clock__menu {
   position: absolute;
   left: -562%;
-  top: 139%;
-}
-
-.title5 {
-  padding: 27px 0;
-}
-.title5 a {
-  font-family: "Futura-premedium";
-  font-style: normal;
-  font-weight: 450;
-  font-size: 16px;
-  line-height: var(--line-height);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--white);
-  border-bottom: 2px solid transparent;
-  padding: 27px 0;
-  transition: all ease 0.3s;
-}
-.title5 a:hover {
-  border-bottom: 2px solid var(--white);
-  transition: all ease-in 0.3s;
+  top: 190%;
 }
 
 .flavours {
@@ -480,7 +475,7 @@ html {
 .flavours__menu {
   position: absolute;
   left: -472%;
-  top: 139%;
+  top: 190%;
 }
 
 .brands {
@@ -489,7 +484,7 @@ html {
 .brands__menu {
   position: absolute;
   left: -1047%;
-  top: 139%;
+  top: 190%;
 }
 
 .leather {
@@ -498,7 +493,7 @@ html {
 .leather__menu {
   position: absolute;
   left: -406.7%;
-  top: 139%;
+  top: 190%;
 }
 
 .wedding {
@@ -507,7 +502,7 @@ html {
 .wedding__menu {
   position: absolute;
   left: -443.5%;
-  top: 139%;
+  top: 190%;
 }
 
 .other {
@@ -516,24 +511,23 @@ html {
 .other__menu {
   position: absolute;
   left: -1916.7%;
-  top: 139%;
+  top: 190%;
 }
 
 .spisok__hidden {
-  margin-bottom: 70px;
   background: #2F2F2F;
 }
 
 .sections {
-  height: 270px;
+  height: 400px;
   background-color: var(--2727);
+  border-bottom: 1.8px solid #2F2F2F;
+  margin: 0 84px 95px 84px;
 }
 
 .title4 {
   margin-bottom: 30px;
   font-family: "Futura-semibold";
-  font-style: normal;
-  font-weight: 600;
   font-size: 16px;
   line-height: var(--line-height);
   letter-spacing: 0.06em;
@@ -541,13 +535,8 @@ html {
   color: var(--white);
 }
 
-.links {
-  margin-bottom: 70px;
-}
 .links a {
   font-family: "Futura-premedium";
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: var(--line-height);
   letter-spacing: 0.06em;
@@ -579,6 +568,8 @@ html {
   display: flex;
   width: 1185px;
   margin: 0px auto;
+  border-top: 1.8px solid #2F2F2F;
+  padding-top: 50px;
 }
 
 .footer__image {
@@ -588,6 +579,7 @@ html {
 }
 .footer__info {
   margin-left: 85px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -620,6 +612,13 @@ html {
   display: flex;
   justify-content: flex-end;
 }
+.image__collections p {
+  font-family: "Futura-premedium";
+  font-size: 18px;
+  line-height: var(--line-height);
+  letter-spacing: 0.06em;
+  color: var(--white);
+}
 .image__collections a {
   font-family: "Futura-premedium";
   font-size: 18px;
@@ -642,14 +641,13 @@ html {
   flex-direction: column;
 }
 .info__top a {
-  margin-top: 5px;
   font-family: "Futura-light";
   font-size: 18px;
   line-height: var(--line-height);
   color: #C2C2C2;
 }
-.info__stores {
-  margin-top: 20px;
+.info__down {
+  height: 30px;
 }
 .info__stores img {
   width: 103px;
@@ -665,7 +663,7 @@ html {
   width: 90px;
   display: flex;
   justify-content: space-between;
-  margin-top: 18px;
+  margin-top: 15px;
 }
 .top__social a {
   transition-duration: 0.3s;
