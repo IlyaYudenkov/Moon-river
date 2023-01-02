@@ -1,7 +1,3 @@
-let offset = 0;
-let active = 0;
-let dots = document.querySelectorAll('.dots')
-
 const images = document.querySelector('.sliderpage-slider-container')
 const prev = document.querySelector('.pagination__prev')
 const next = document.querySelector('.pagination__next')
@@ -16,6 +12,11 @@ const pointFour = document.querySelector('.location__point4')
 const pointFourAddress = document.querySelector('.pointFour')
 const pointFive = document.querySelector('.location__point5')
 const pointFiveAddress = document.querySelector('.pointFive')
+
+
+const langRu = document.querySelector('.lang__ru')
+const langEng = document.querySelector('.lang__eng')
+
 
 const burgerHeader = document.querySelector('.header__burger')
 const burgerHidden = document.querySelector('.hidden__burger')
@@ -40,7 +41,11 @@ const sections = document.querySelector('.sections')
 const footer = document.querySelector('.hidden__footer')
 const wrapper = document.querySelector('.wrapper')
 
-nextSlide = () =>{
+let offset = 0;
+let active = 0;
+let dots = document.querySelectorAll('.dots')
+
+nextSlide = () => {
     dots[active].classList.remove('_active')
     if(active + 1 == dots.length){
         active = 0;
@@ -113,6 +118,13 @@ displayNone5 = () => {
     pointFiveAddress.style.display = 'none';
 }
 
+
+translateEn = () => {
+    document.querySelectorAll('._translate')[0].innerHTML = document.querySelectorAll('._translate')[0].id;
+    document.querySelectorAll('._translate')[1].innerHTML = document.querySelectorAll('._translate')[1].id;
+}
+
+
 showHidden = () =>{
     wrapperHidden.style.display = 'block';
     wrapper.style.display = 'none';
@@ -164,7 +176,7 @@ showFlavours = () => {
     closeOther();
 }
 
-closeFlavours = () =>{
+closeFlavours = () => {
     flavoursMenu.style.display = 'none';
     footer.style.display = 'block';
 }
@@ -180,7 +192,7 @@ showBrands = () => {
     closeOther();
 }
 
-closeBrands = () =>{
+closeBrands = () => {
     brandsMenu.style.display = 'none';
     footer.style.display = 'block';
 }
@@ -196,7 +208,7 @@ showLeather = () => {
     closeOther();
 }
 
-closeLeather = () =>{
+closeLeather = () => {
     leatherMenu.style.display = 'none';
     footer.style.display = 'block';
 }
@@ -234,7 +246,6 @@ closeFooter = () => {
     footer.style.display = 'none';
 }
 
-
 closeSections = () => { 
     sections.style.display = 'none';
 } 
@@ -258,11 +269,11 @@ pointFour.addEventListener('mouseout', displayNone4)
 pointFive.addEventListener('mouseover', displayBlock5)
 pointFive.addEventListener('mouseout', displayNone5)
 
+langEng.addEventListener('click', translateEn);
 
 
 burgerHeader.addEventListener('click', showHidden)
 burgerHidden.addEventListener('click', closeHidden)
-
 
 
 jewelry.addEventListener('mouseover', showJewelry)
@@ -299,3 +310,6 @@ other.addEventListener('mouseover', showOther)
 otherMenu.addEventListener('mouseout', closeOther)
 otherMenu.addEventListener('mouseout', closeSections)
 other.addEventListener('mouseover', closeFooter)
+
+
+
