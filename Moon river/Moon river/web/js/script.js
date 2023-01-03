@@ -16,6 +16,7 @@ const pointFiveAddress = document.querySelector('.pointFive')
 
 const langRu = document.querySelector('.lang__ru')
 const langEng = document.querySelector('.lang__eng')
+let translateArr = document.querySelectorAll('._translate');
 
 
 const burgerHeader = document.querySelector('.header__burger')
@@ -27,8 +28,8 @@ const jewelry = document.querySelector('.jewelry')
 const jewelryMenu = document.querySelector('.jewelry__menu')
 const clock = document.querySelector('.clock')
 const clockMenu = document.querySelector('.clock__menu')
-const flavours = document.querySelector('.flavours')
-const flavoursMenu = document.querySelector('.flavours__menu')
+const flavors = document.querySelector('.flavors')
+const flavorsMenu = document.querySelector('.flavors__menu')
 const brands = document.querySelector('.brands')
 const brandsMenu = document.querySelector('.brands__menu')
 const leather = document.querySelector('.leather')
@@ -119,11 +120,25 @@ displayNone5 = () => {
 }
 
 
-translateEn = () => {
-    document.querySelectorAll('._translate')[0].innerHTML = document.querySelectorAll('._translate')[0].id;
-    document.querySelectorAll('._translate')[1].innerHTML = document.querySelectorAll('._translate')[1].id;
+wordsRu = () => {  
+    translateArrMain = Array.from(translateArr);
+    for(let i = 0; i < translateArrMain.length; i++){
+        translateArrMain[i].value = translateArr[i].innerText;
+    }   
 }
 
+translateEn = () => {
+    for(let i = 0; i < translateArrMain.length; i++){
+        translateArr[i].innerText = translateArr[i].id;
+    }
+}
+
+translateRu = () => {
+    for (let i = 0; i < translateArrMain.length; i++){
+        translateArr[i].innerText = translateArrMain[i].value;
+    }
+}
+wordsRu();
 
 showHidden = () =>{
     wrapperHidden.style.display = 'block';
@@ -139,7 +154,7 @@ showJewelry = () => {
         sections.style.display = 'block';
         closeClock();
         closeBrands();
-        closeFlavours();
+        closeFlavors();
         closeLeather();
         closeWedding();
         closeOther();
@@ -154,7 +169,7 @@ showClock = () => {
     sections.style.display = 'block';
     closeJewelry();
     closeBrands();
-    closeFlavours();
+    closeFlavors();
     closeLeather();
     closeWedding();
     closeOther();
@@ -165,8 +180,8 @@ closeClock = () => {
 }
     
 
-showFlavours = () => {
-    flavoursMenu.style.display = 'flex';
+showFlavors = () => {
+    flavorsMenu.style.display = 'flex';
     sections.style.display = 'block';
     closeJewelry();
     closeClock();
@@ -176,8 +191,8 @@ showFlavours = () => {
     closeOther();
 }
 
-closeFlavours = () => {
-    flavoursMenu.style.display = 'none';
+closeFlavors = () => {
+    flavorsMenu.style.display = 'none';
     footer.style.display = 'block';
 }
 
@@ -186,7 +201,7 @@ showBrands = () => {
     sections.style.display = 'block';
     closeJewelry();
     closeClock();
-    closeFlavours();
+    closeFlavors();
     closeLeather();
     closeWedding();
     closeOther();
@@ -202,7 +217,7 @@ showLeather = () => {
     sections.style.display = 'block';
     closeJewelry();
     closeClock();
-    closeFlavours();
+    closeFlavors();
     closeBrands();
     closeWedding();
     closeOther();
@@ -218,7 +233,7 @@ showWedding = () => {
     sections.style.display = 'block';
     closeJewelry();
     closeClock();
-    closeFlavours();
+    closeFlavors();
     closeBrands();
     closeLeather();
     closeOther();
@@ -233,7 +248,7 @@ showOther = () => {
     sections.style.display = 'block';
     closeJewelry();
     closeClock();
-    closeFlavours();
+    closeFlavors();
     closeBrands();
     closeWedding();
 }
@@ -270,6 +285,7 @@ pointFive.addEventListener('mouseover', displayBlock5)
 pointFive.addEventListener('mouseout', displayNone5)
 
 langEng.addEventListener('click', translateEn);
+langRu.addEventListener('click', translateRu)
 
 
 burgerHeader.addEventListener('click', showHidden)
@@ -286,10 +302,10 @@ clockMenu.addEventListener('mouseout', closeClock)
 clockMenu.addEventListener('mouseout', closeSections)
 clock.addEventListener('mouseover', closeFooter)
 
-flavours.addEventListener('mouseover', showFlavours)
-flavoursMenu.addEventListener('mouseout', closeFlavours)
-flavoursMenu.addEventListener('mouseout', closeSections)
-flavours.addEventListener('mouseover', closeFooter)
+flavors.addEventListener('mouseover', showFlavors)
+flavorsMenu.addEventListener('mouseout', closeFlavors)
+flavorsMenu.addEventListener('mouseout', closeSections)
+flavors.addEventListener('mouseover', closeFooter)
 
 brands.addEventListener('mouseover', showBrands)
 brandsMenu.addEventListener('mouseout', closeBrands)

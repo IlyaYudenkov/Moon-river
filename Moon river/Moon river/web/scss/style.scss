@@ -258,15 +258,16 @@
    }
 }
 
-.flavours {
+.flavors {
    position: relative;
    &__title {
    }
 
-   &__menu {
+   &__menu.show{
       position: absolute;
       left: -472%;
       top: 190%;
+      
    }
 }
 .brands {

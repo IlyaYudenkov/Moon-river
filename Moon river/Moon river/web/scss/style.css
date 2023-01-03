@@ -290,10 +290,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 190%;
 }
 
-.flavours {
+.flavors {
   position: relative;
 }
-.flavours__menu {
+.flavors__menu.show {
   position: absolute;
   left: -472%;
   top: 190%;
