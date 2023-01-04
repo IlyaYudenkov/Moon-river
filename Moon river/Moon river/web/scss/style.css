@@ -98,8 +98,8 @@ h1, h2, h3, h4, h5, h6 {
 .show {
   opacity: 0;
   transition: 1s;
-  -webkit-animation: show 1s 1;
-          animation: show 1s 1;
+  -webkit-animation: show 0.7s 1;
+          animation: show 0.7s 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0s;
@@ -124,8 +124,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .showWrap {
   transition: 1s;
-  -webkit-animation: showWrap 1s 1;
-          animation: showWrap 1s 1;
+  -webkit-animation: showWrap 0.7s 1;
+          animation: showWrap 0.7s 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0s;
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container-headerHidden {
-  width: 1185px;
+  width: 1155px;
   margin: 0px auto;
 }
 
@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 .hidden__menu {
   display: flex;
   justify-content: space-between;
-  width: 260px;
+  width: 275px;
 }
 .hidden__burger img {
   width: 100%;
@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container-mainHidden {
-  width: 1185px;
+  width: 1155px;
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
@@ -267,6 +267,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: all ease-in 0.3s;
 }
 
+.menu__hidden {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
 .jewelry {
   position: relative;
 }
@@ -275,27 +281,31 @@ h1, h2, h3, h4, h5, h6 {
   top: 190%;
 }
 
-.menu__hidden {
-  display: flex;
-  justify-content: space-between;
-  width: 800px;
-}
-
 .clock {
   position: relative;
 }
 .clock__menu {
   position: absolute;
-  left: -562%;
+  left: -550%;
+  top: 190%;
+}
+.clock__menu._change {
+  position: absolute;
+  left: -271%;
   top: 190%;
 }
 
 .flavors {
   position: relative;
 }
-.flavors__menu.show {
+.flavors__menu {
   position: absolute;
-  left: -472%;
+  left: -459%;
+  top: 190%;
+}
+.flavors__menu._change {
+  position: absolute;
+  left: -441%;
   top: 190%;
 }
 
@@ -304,7 +314,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .brands__menu {
   position: absolute;
-  left: -1047%;
+  left: -1017%;
+  top: 190%;
+}
+.brands__menu._change {
+  position: absolute;
+  left: -832%;
   top: 190%;
 }
 
@@ -313,7 +328,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .leather__menu {
   position: absolute;
-  left: -406.7%;
+  left: -394%;
+  top: 190%;
+}
+.leather__menu._change {
+  position: absolute;
+  left: -395%;
   top: 190%;
 }
 
@@ -322,7 +342,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wedding__menu {
   position: absolute;
-  left: -443.5%;
+  left: -431%;
+  top: 190%;
+}
+.wedding__menu._change {
+  position: absolute;
+  left: -420%;
   top: 190%;
 }
 
@@ -331,7 +356,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .other__menu {
   position: absolute;
-  left: -1916.7%;
+  left: -1868%;
+  top: 190%;
+}
+.other__menu._change {
+  position: absolute;
+  left: -2205%;
   top: 190%;
 }
 
@@ -545,12 +575,12 @@ html {
 }
 
 .container-left {
-  width: 765px;
+  width: 735px;
   margin: 0px auto;
 }
 
 .container-right {
-  width: 265px;
+  width: 270px;
   margin: 0px auto;
 }
 
@@ -593,7 +623,7 @@ html {
 .ring {
   position: absolute;
   left: 55%;
-  top: 45%;
+  top: 40%;
 }
 
 .menu__heart img {
@@ -704,8 +734,11 @@ html {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   background-color: transparent;
-  color: var(--2727);
+  color: #C4C4C4;
   cursor: pointer;
+}
+.lang__ru:hover {
+  color: var(--2727);
 }
 .lang__eng {
   font-family: "Futura-medium";
@@ -718,6 +751,10 @@ html {
   cursor: pointer;
 }
 .lang__eng:hover {
+  color: var(--2727);
+}
+
+._langSelected {
   color: var(--2727);
 }
 
@@ -1100,7 +1137,7 @@ html {
 }
 
 .necklace-container {
-  width: 500px;
+  width: 450px;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
@@ -1212,7 +1249,7 @@ html {
 }
 
 .slider__item {
-  margin: 0 27px;
+  margin: 0 23px;
 }
 .slider__item img {
   display: block;
@@ -1391,7 +1428,8 @@ html {
   display: flex;
   justify-content: space-between;
 }
-.up__menu a {
+
+.menu__li {
   font-family: "Futura-premedium";
   font-size: 14px;
   line-height: var(--line-height);
@@ -1399,8 +1437,9 @@ html {
   text-transform: uppercase;
   color: var(--white);
   transition-duration: 0.3s;
+  cursor: pointer;
 }
-.up__menu a:hover {
+.menu__li:hover {
   color: black;
   transition-duration: 0.3s;
 }

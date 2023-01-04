@@ -17,6 +17,10 @@ const pointFiveAddress = document.querySelector('.pointFive')
 const langRu = document.querySelector('.lang__ru')
 const langEng = document.querySelector('.lang__eng')
 let translateArr = document.querySelectorAll('._translate');
+let placeholder1 = document.querySelector('._1');
+let placeholder2 = document.querySelector('._2');
+let placeholder3 = document.querySelector('._3');
+let placeholder4 = document.querySelector('._4');
 
 
 const burgerHeader = document.querySelector('.header__burger')
@@ -48,41 +52,41 @@ let dots = document.querySelectorAll('.dots')
 
 nextSlide = () => {
     dots[active].classList.remove('_active')
-    if(active + 1 == dots.length){
+    if (active + 1 == dots.length) {
         active = 0;
         prev.disabled = 'true';
         prev.classList.add('_disabled')
     }
-    else{
+    else {
         active++;
         prev.disabled = false;
         prev.classList.remove('_disabled')
     }
     dots[active].classList.add('_active')
     offset += 223;
-    if(offset > 1250){
+    if (offset > 1250) {
         offset = 0;
     }
     images.style.left = -offset + 'px';
 
 }
 
-prevSlide = () =>{
+prevSlide = () => {
     dots[active].classList.remove('_active')
-    if (active - 1 == 0){
-            prev.disabled = 'true';
-            prev.classList.add('_disabled')
+    if (active - 1 == 0) {
+        prev.disabled = 'true';
+        prev.classList.add('_disabled')
     }
-    if(active - 1 == -1 ){
+    if (active - 1 == -1) {
         active = 0;
     }
-    else{
+    else {
         active--;
     }
-    dots[active].classList.add('_active') 
+    dots[active].classList.add('_active')
     offset -= 223;
-    if(offset < 0) {
-        offset = 0;  
+    if (offset < 0) {
+        offset = 0;
     }
     images.style.left = -offset + 'px';
 }
@@ -119,28 +123,49 @@ displayNone5 = () => {
     pointFiveAddress.style.display = 'none';
 }
 
-
-wordsRu = () => {  
-    translateArrMain = Array.from(translateArr);
-    for(let i = 0; i < translateArrMain.length; i++){
-        translateArrMain[i].value = translateArr[i].innerText;
-    }   
+wordsRu = () => {
+    for (let i = 0; i < translateArr.length; i++) {
+        translateArr[i].value = translateArr[i].innerText;
+    }
 }
 
 translateEn = () => {
-    for(let i = 0; i < translateArrMain.length; i++){
+    for (let i = 0; i < translateArr.length; i++) {
         translateArr[i].innerText = translateArr[i].id;
     }
+    placeholder1.placeholder = placeholder1.id;
+    placeholder2.placeholder = placeholder2.id;
+    placeholder3.placeholder = placeholder3.id;
+    placeholder4.placeholder = placeholder4.id;
+    clockMenu.classList.toggle('_change');
+    flavorsMenu.classList.toggle('_change');
+    brandsMenu.classList.toggle('_change');
+    leatherMenu.classList.toggle('_change');
+    weddingMenu.classList.toggle('_change');
+    otherMenu.classList.toggle('_change');
+    langEng.classList.toggle('_langSelected');
+    langRu.classList.remove('_langSelected');
 }
 
 translateRu = () => {
-    for (let i = 0; i < translateArrMain.length; i++){
-        translateArr[i].innerText = translateArrMain[i].value;
+    for (let i = 0; i < translateArr.length; i++) {
+        translateArr[i].innerText = translateArr[i].value;
     }
+    placeholder1.placeholder = 'Введите E-mail';
+    placeholder2.placeholder = 'Введите адрес';
+    placeholder3.placeholder = 'Введите E-mail';
+    placeholder4.placeholder = 'Введите E-mail';
+    clockMenu.classList.remove('_change');
+    flavorsMenu.classList.remove('_change');
+    brandsMenu.classList.remove('_change');
+    leatherMenu.classList.remove('_change');
+    weddingMenu.classList.remove('_change');
+    otherMenu.classList.remove('_change');
+    langRu.classList.toggle('_langSelected');
+    langEng.classList.remove('_langSelected');
 }
-wordsRu();
 
-showHidden = () =>{
+showHidden = () => {
     wrapperHidden.style.display = 'block';
     wrapper.style.display = 'none';
 }
@@ -150,18 +175,18 @@ closeHidden = () => {
 }
 
 showJewelry = () => {
-        jewelryMenu.style.display = 'flex';
-        sections.style.display = 'block';
-        closeClock();
-        closeBrands();
-        closeFlavors();
-        closeLeather();
-        closeWedding();
-        closeOther();
+    jewelryMenu.style.display = 'flex';
+    sections.style.display = 'block';
+    closeClock();
+    closeBrands();
+    closeFlavors();
+    closeLeather();
+    closeWedding();
+    closeOther();
 }
 closeJewelry = () => {
-        jewelryMenu.style.display = 'none';
-        footer.style.display = 'block';
+    jewelryMenu.style.display = 'none';
+    footer.style.display = 'block';
 }
 
 showClock = () => {
@@ -175,10 +200,10 @@ showClock = () => {
     closeOther();
 }
 closeClock = () => {
-    clockMenu.style.display = 'none';  
-    footer.style.display = 'block';  
+    clockMenu.style.display = 'none';
+    footer.style.display = 'block';
 }
-    
+
 
 showFlavors = () => {
     flavorsMenu.style.display = 'flex';
@@ -261,9 +286,11 @@ closeFooter = () => {
     footer.style.display = 'none';
 }
 
-closeSections = () => { 
+closeSections = () => {
     sections.style.display = 'none';
-} 
+}
+
+wordsRu();
 
 prev.addEventListener('click', prevSlide);
 next.addEventListener('click', nextSlide);
