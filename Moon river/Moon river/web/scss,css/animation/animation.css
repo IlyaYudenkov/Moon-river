@@ -1,0 +1,30 @@
+.show {
+  opacity: 0;
+  transition: 1s;
+  animation: show 0.7s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.showWrap {
+  transition: 1s;
+  animation: showWrap 0.7s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+@keyframes showWrap {
+  0% {
+    transform: translate(-80%, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}

@@ -104,7 +104,6 @@ closeHidden = () => {
     wrapper.style.display = 'block';
 }
 
-
 wordsRu();
 
 prev.addEventListener('click', prevSlide);

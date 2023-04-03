@@ -1,129 +1,12 @@
-@charset "UTF-8";
-/*Обнуление*/
+@import "nullstyle.css";
+@import url(animation/animation.css);
+@import url(../fonts/Futura/fonts.css);
 @import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-:focus, :active {
-  outline: none;
-}
-
-a:focus, a:active {
-  outline: none;
-}
-
-nav, footer, header, aside {
-  display: block;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-a, a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*--------------------*/
-@font-face {
-  font-family: "Futura-light";
-  src: url(../../web/fonts/FuturaPT-Light.woff2);
-}
-@font-face {
-  font-family: "Futura-medium";
-  src: url(../../web/fonts/FuturaPT-Medium.woff2);
-}
-@font-face {
-  font-family: "Futura-premedium";
-  src: url(../../web/fonts/FuturaPT-Book.woff2);
-}
-@font-face {
-  font-family: "Futura-semibold";
-  src: url(../../web/fonts/FuturaPT-Demi.woff2);
-}
+@import 'patterns.css';
 :root {
   --line-height: 1.3em;
   --white: #ffffff;
   --2727: #272727;
-}
-
-.show {
-  opacity: 0;
-  transition: 1s;
-  animation: show 0.7s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
-}
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.showWrap {
-  transition: 1s;
-  animation: showWrap 0.7s 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
-}
-@keyframes showWrap {
-  0% {
-    transform: translate(-80%, 0%);
-  }
-  100% {
-    transform: translate(0%, 0%);
-  }
 }
 
 .wrapper-hidden {
@@ -220,25 +103,6 @@ h1, h2, h3, h4, h5, h6 {
   transition-duration: 0.3s;
 }
 
-.title5 {
-  padding: 27px 0;
-}
-.title5 a {
-  font-family: "Futura-premedium";
-  font-size: 16px;
-  line-height: var(--line-height);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--white);
-  border-bottom: 2px solid transparent;
-  padding: 20px 0;
-  transition: all ease 0.3s;
-}
-.title5 a:hover {
-  border-bottom: 2px solid var(--white);
-  transition: all ease-in 0.3s;
-}
-
 .container-titles {
   background-color: #2F2F2F;
 }
@@ -327,18 +191,9 @@ h1, h2, h3, h4, h5, h6 {
   left: 0%;
 }
 
-.title4 {
-  margin-bottom: 30px;
-  font-family: "Futura-semibold";
-  font-size: 16px;
-  line-height: var(--line-height);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-
 .links a {
-  font-family: "Futura-premedium";
+  font-family: "Futura PT Book";
+  font-weight: normal;
   font-size: 18px;
   line-height: var(--line-height);
   letter-spacing: 0.06em;
@@ -399,7 +254,8 @@ h1, h2, h3, h4, h5, h6 {
 .image__title {
   text-align: left;
   padding-top: 30px;
-  font-family: "Futura-premedium";
+  font-family: "Futura PT";
+  font-weight: 500;
   font-size: 18px;
   line-height: var(--line-height);
   letter-spacing: 0.06em;
@@ -419,14 +275,16 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: flex-end;
 }
 .image__collections p {
-  font-family: "Futura-premedium";
+  font-family: "Futura PT";
+  font-weight: 500;
   font-size: 18px;
   line-height: var(--line-height);
   letter-spacing: 0.06em;
   color: var(--white);
 }
 .image__collections a {
-  font-family: "Futura-premedium";
+  font-family: "Futura PT";
+  font-weight: 500;
   font-size: 18px;
   line-height: var(--line-height);
   letter-spacing: 0.06em;
@@ -443,7 +301,8 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 .info__top a {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 18px;
   line-height: var(--line-height);
   color: #C2C2C2;
@@ -490,7 +349,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .down__input input {
   background-color: var(--2727);
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   width: 245px;
   font-size: 18px;
   line-height: var(--line-height);
@@ -498,13 +358,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 8px;
 }
 .down__input input::-moz-placeholder {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 22px;
   line-height: var(--line-height);
   color: #959595;
 }
 .down__input input::placeholder {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 22px;
   line-height: var(--line-height);
   color: #959595;
@@ -512,6 +374,11 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 2000px;
+  min-width: 1200px;
 }
 
 .begin {
@@ -567,7 +434,7 @@ html {
 
 .ring {
   position: absolute;
-  left: 55%;
+  left: 60%;
   top: 40%;
 }
 
@@ -611,30 +478,12 @@ html {
   transition-duration: 0.3s;
 }
 
-.title3 {
-  margin-bottom: 9px;
-  font-family: "Futura-medium";
-  font-size: 16px;
-  line-height: var(--line-height);
-  color: var(--white);
-  text-transform: uppercase;
-}
-
-.subtitle {
-  margin-bottom: 9px;
-  font-family: "Futura-light";
-  font-size: 18px;
-  line-height: var(--line-height);
-  color: #C2C2C2;
-}
-
-.price {
-  font-family: "Segoe UI";
-  font-style: italic;
+.down__subtitle {
+  font-family: "Futura PT";
   font-weight: 300;
   font-size: 18px;
   line-height: var(--line-height);
-  color: #EFC58B;
+  color: #C2C2C2;
 }
 
 .begin-left {
@@ -673,7 +522,8 @@ html {
 }
 
 .lang__ru {
-  font-family: "Futura-medium";
+  font-family: "Futura PT Book";
+  font-weight: normal;
   font-size: 16px;
   line-height: var(--line-height);
   letter-spacing: 0.05em;
@@ -686,7 +536,8 @@ html {
   color: var(--2727);
 }
 .lang__eng {
-  font-family: "Futura-medium";
+  font-family: "Futura PT Book";
+  font-weight: normal;
   font-size: 16px;
   line-height: var(--line-height);
   letter-spacing: 0.05em;
@@ -696,10 +547,6 @@ html {
   cursor: pointer;
 }
 .lang__eng:hover {
-  color: var(--2727);
-}
-
-._langSelected {
   color: var(--2727);
 }
 
@@ -758,27 +605,69 @@ html {
   opacity: 0.7;
   transition-duration: 0.3s;
 }
-
-.subtitle {
-  font-family: "Futura-light";
-  font-size: 24px;
-  line-height: var(--line-height);
-  color: var(--white);
+@media (max-width: 1250px) {
+  .for .for__men {
+    width: 550px;
+  }
+  .for .for__women {
+    width: 550px;
+  }
 }
-
-.title {
-  font-family: "Forum";
-  font-size: 64px;
-  line-height: 1.1em;
-  letter-spacing: 0.03em;
-  color: var(--white);
-  margin-bottom: 23px;
+@media (min-width: 1251px) {
+  .for .for__men {
+    width: 570px;
+  }
+  .for .for__women {
+    width: 570px;
+  }
 }
-
-.underline {
-  width: 130px;
-  height: 1px;
-  border: 1px solid var(--white);
+@media (min-width: 1300px) {
+  .for .for__men {
+    width: 600px;
+  }
+  .for .for__women {
+    width: 600px;
+  }
+}
+@media (min-width: 1370px) {
+  .for .for__men {
+    width: 640px;
+  }
+  .for .for__women {
+    width: 640px;
+  }
+}
+@media (min-width: 1415px) {
+  .for .for__men {
+    width: 675px;
+  }
+  .for .for__women {
+    width: 675px;
+  }
+}
+@media (min-width: 1530px) {
+  .for .for__men {
+    width: 750px;
+  }
+  .for .for__women {
+    width: 750px;
+  }
+}
+@media (min-width: 1660px) {
+  .for .for__men {
+    width: 800px;
+  }
+  .for .for__women {
+    width: 800px;
+  }
+}
+@media (min-width: 1820px) {
+  .for .for__men {
+    width: 900px;
+  }
+  .for .for__women {
+    width: 900px;
+  }
 }
 
 .map {
@@ -787,7 +676,7 @@ html {
   margin-bottom: 20px;
 }
 .map__info {
-  width: 1100px;
+  width: 1250px;
   height: 604px;
   background-color: var(--2727);
   display: flex;
@@ -812,7 +701,8 @@ html {
   color: var(--white);
 }
 .info__subtitle {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 18px;
   line-height: var(--line-height);
   color: var(--white);
@@ -827,20 +717,23 @@ html {
 .info__inputs input {
   width: 360px;
   background-color: var(--2727);
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 18px;
   line-height: var(--line-height);
   color: var(--white);
   margin-bottom: 8px;
 }
 .info__inputs input::-moz-placeholder {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 18px;
   line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.4);
 }
 .info__inputs input::placeholder {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 18px;
   line-height: var(--line-height);
   color: rgba(255, 255, 255, 0.4);
@@ -848,20 +741,6 @@ html {
 .info__inputs button {
   background-color: var(--2727);
   margin-bottom: 3px;
-}
-
-.point {
-  height: 43px;
-  display: none;
-  position: absolute;
-  background: rgba(103, 103, 103, 0.58);
-  border-radius: 2px;
-  font-family: "Futura-light";
-  padding: 8px;
-  text-align: center;
-  font-size: 18px;
-  line-height: var(--line-height);
-  color: var(--white);
 }
 
 .location__point {
@@ -974,6 +853,12 @@ html {
   flex-direction: column;
 }
 
+@media (min-width: 1370px) {
+  .products__necklace {
+    background: url(../img/necklace.png) 50%/contain no-repeat;
+    width: 850px;
+  }
+}
 .rings__silver {
   background-color: #EDEDED;
   display: flex;
@@ -1010,6 +895,22 @@ html {
   margin-bottom: 70px;
 }
 
+@media (min-width: 1480px) {
+  .rings__gold {
+    width: 420px;
+  }
+  .rings__silver {
+    width: 420px;
+  }
+}
+@media (min-width: 1745px) {
+  .rings__gold {
+    width: 550px;
+  }
+  .rings__silver {
+    width: 550px;
+  }
+}
 .silver__title {
   color: var(--2727);
 }
@@ -1098,6 +999,22 @@ html {
   margin-top: -75px;
 }
 
+@media (min-width: 1480px) {
+  .earrings__moon {
+    width: 420px;
+  }
+  .earrings__win {
+    width: 420px;
+  }
+}
+@media (min-width: 1745px) {
+  .earrings__moon {
+    width: 550px;
+  }
+  .earrings__win {
+    width: 550px;
+  }
+}
 .moon__title {
   color: var(--2727);
 }
@@ -1215,28 +1132,6 @@ html {
   justify-content: space-between;
 }
 
-.dots {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #656565;
-}
-
-.dots._active {
-  width: 9px;
-  height: 9px;
-  background: var(--white);
-}
-
-.title1 {
-  font-family: "Futura-medium";
-  font-size: 18px;
-  line-height: var(--line-height);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--2727);
-}
-
 .contacts {
   display: flex;
   align-items: center;
@@ -1272,7 +1167,8 @@ html {
 }
 
 .phone__number a {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 22px;
   line-height: var(--line-height);
   color: #959595;
@@ -1292,33 +1188,26 @@ html {
   border-bottom: 1px solid var(--2727);
 }
 .email__input input {
-  font-family: "Futura-medium";
+  font-family: "Futura PT Book";
+  font-weight: normal;
   width: 245px;
   font-size: 22px;
   line-height: var(--line-height);
   color: var(--2727);
 }
 .email__input ::-moz-placeholder {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 22px;
   line-height: var(--line-height);
   color: #959595;
 }
 .email__input ::placeholder {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 22px;
   line-height: var(--line-height);
   color: #959595;
-}
-
-.title2 {
-  font-family: "Futura-medium";
-  font-size: 14px;
-  line-height: var(--line-height);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 15px;
 }
 
 .footer {
@@ -1342,7 +1231,8 @@ html {
 }
 
 .menu__li {
-  font-family: "Futura-premedium";
+  font-family: "Futura PT";
+  font-weight: 500;
   font-size: 14px;
   line-height: var(--line-height);
   letter-spacing: 0.06em;
@@ -1372,7 +1262,8 @@ html {
 }
 .infolink__info a {
   margin-top: 5px;
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 18px;
   line-height: var(--line-height);
   color: #C2C2C2;
@@ -1393,7 +1284,8 @@ html {
 }
 .inputApp__input input {
   background-color: var(--2727);
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   width: 245px;
   font-size: 18px;
   line-height: var(--line-height);
@@ -1401,13 +1293,15 @@ html {
   margin-bottom: 8px;
 }
 .inputApp__input input::-moz-placeholder {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 22px;
   line-height: var(--line-height);
   color: #959595;
 }
 .inputApp__input input::placeholder {
-  font-family: "Futura-light";
+  font-family: "Futura PT";
+  font-weight: 300;
   font-size: 22px;
   line-height: var(--line-height);
   color: #959595;
@@ -1437,97 +1331,4 @@ html {
 .info__webs a:hover {
   transform: scale(120%);
   transition-duration: 0.3s;
-}
-
-@media (max-width: 1250px) {
-  .ring {
-    left: 60%;
-  }
-  .for__men {
-    width: 550px;
-  }
-  .for__women {
-    width: 550px;
-  }
-}
-@media (min-width: 1251px) {
-  .for__men {
-    width: 570px;
-  }
-  .for__women {
-    width: 570px;
-  }
-}
-@media (min-width: 1300px) {
-  .for__men {
-    width: 600px;
-  }
-  .for__women {
-    width: 600px;
-  }
-}
-@media (min-width: 1370px) {
-  .for__men {
-    width: 640px;
-  }
-  .for__women {
-    width: 640px;
-  }
-  .products__necklace {
-    background: url(../img/necklace.png) 50%/contain no-repeat;
-    width: 850px;
-  }
-}
-@media (min-width: 1415px) {
-  .for__men {
-    width: 675px;
-  }
-  .for__women {
-    width: 675px;
-  }
-}
-@media (min-width: 1480px) {
-  .rings__gold {
-    width: 433px;
-  }
-  .rings__silver {
-    width: 433px;
-  }
-  .earrings__moon {
-    width: 433px;
-  }
-  .earrings__win {
-    width: 433px;
-  }
-}
-@media (min-width: 1530px) {
-  .ring {
-    left: 60%;
-  }
-  .for__men {
-    width: 750px;
-  }
-  .for__women {
-    width: 750px;
-  }
-}
-@media (min-width: 1660px) {
-  .for__men {
-    width: 800px;
-  }
-  .for__women {
-    width: 800px;
-  }
-  .rings__gold {
-    width: 465px;
-  }
-  .rings__silver {
-    width: 465px;
-  }
-  .earrings__moon {
-    width: 465px;
-  }
-  .earrings__win {
-    width: 465px;
-  }
 }

@@ -1,0 +1,126 @@
+.title {
+  font-family: "Forum";
+  font-size: 64px;
+  line-height: 1.1em;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  margin-bottom: 23px;
+}
+
+.title1 {
+  font-family: "Futura PT Book";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: var(--line-height);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--2727);
+}
+
+.title2 {
+  font-family: "Futura PT Book";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: var(--line-height);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 15px;
+}
+
+.title3 {
+  margin-bottom: 9px;
+  font-family: "Futura PT Book";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: var(--line-height);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.title4 {
+  margin-bottom: 30px;
+  font-family: "Futura PT";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: var(--line-height);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.title5 {
+  padding: 27px 0;
+}
+.title5 a {
+  font-family: "Futura PT";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: var(--line-height);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  border-bottom: 2px solid transparent;
+  padding: 20px 0;
+  transition: all ease 0.3s;
+}
+.title5 a:hover {
+  border-bottom: 2px solid var(--white);
+  transition: all ease-in 0.3s;
+}
+
+.subtitle {
+  font-family: "Futura PT";
+  font-weight: 300;
+  font-size: 24px;
+  line-height: var(--line-height);
+  color: var(--white);
+}
+
+._langSelected {
+  color: var(--2727);
+}
+
+.underline {
+  width: 130px;
+  height: 1px;
+  border: 1px solid var(--white);
+}
+
+.point {
+  height: 43px;
+  display: none;
+  position: absolute;
+  background: rgba(103, 103, 103, 0.58);
+  border-radius: 2px;
+  font-family: "Futura PT";
+  font-weight: 300;
+  padding: 8px;
+  text-align: center;
+  font-size: 18px;
+  line-height: var(--line-height);
+  color: var(--white);
+}
+
+.dots {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #656565;
+}
+
+.dots._active {
+  width: 9px;
+  height: 9px;
+  background: var(--white);
+}
+
+.price {
+  margin-top: 9px;
+  font-family: "Segoe UI";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: var(--line-height);
+  color: #EFC58B;
+}
